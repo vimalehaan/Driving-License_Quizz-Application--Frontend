@@ -13,9 +13,33 @@ const Certificate = ({ recipientName, courseName, completionDate, recipientEmail
     const [certificateAppeared, setCertificateAppeared] = useState(false);
     const componentRef = useRef();
 
+    const [questionViewData, setQuestionViewData] = useState([]);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [isUnavailable, setIsUnavailable] = useState(false);
+
+    const attemptId = 'nu'
+
     useEffect(() => {
         setCertificateAppeared(true);
+
+        const fetchAttempts = async () => {
+            try {
+                // Make a GET request to your backend endpoint
+                const response = await axios.get(`http://localhost:3001/viewattempt/${attemptId}`); 
+                console.log('Response from backend:', response.data);
+                // Set the fetched attempted quiz in state
+                setQuestionViewData(response.data);
+
+            } catch (error) {
+                console.error('Error fetching attempted quizzes:', error);
+                setIsUnavailable(true);
+            }
+        };
+
+        // Call the fetchAttempts function when the component mounts
+        fetchAttempts();
     }, []);
+
 
     // Function to handle PDF generation and sending to backend
     const handleGeneratePDF = async () => {

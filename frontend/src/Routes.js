@@ -29,7 +29,7 @@ import TransactionTable from './Components/TransactionLog/transaction-table';
 import Certificate from './Pages/CertificatePage/Certificatepage';
 import InvoiceTemplate from './Components/Invoice/Invoice';
 import Invoice from './Pages/InvoicePage/Invoice';
-
+import UserActivityLogPage from './Pages/UserActivityLogPage/UserActivityLogPage';
 import DummyPage from './Pages/Dummy';
 import ProtectedRoute from './Components/Utils/ProtectedRoutes';
 
@@ -63,7 +63,8 @@ function RouteMain() {
                                 <Route path="/transaction" element={<TransactionTable />} />
                                 <Route path="/invoicetemp" element={<InvoiceTemplate />} />
                                 <Route path="/invoice" element={<Invoice />} />
-
+                                <Route path='/activitylog' element = {<UserActivityLogPage />} />
+                                <Route path='/certificate' element = {<Certificate />} />
                                 
                             </>
                         ) : userRole === 'admin' ? (
