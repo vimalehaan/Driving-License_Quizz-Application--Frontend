@@ -1,39 +1,14 @@
-import {
-    React,
-    Grid,
-    styled,
-    Paper,
-    Avatar,
-    ButtonGroup,
-    Box,
-    Button,
-    BottomNavigation,
-    BottomNavigationAction,
-    Drawer,
-    CssBaseline,
-    AppBar,
-    Toolbar,
-    Stack,
-    List,
-    Typography,
-    Divider,
-    ListItem,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-    GridViewOutlinedIcon,
-    AddCircleOutlinedIcon,
-    CreditScoreOutlinedIcon,
-    PersonOutlinedIcon,
-    LogoutOutlinedIcon,
-    Pagination,
-    Chip
-} from '../../Mui'
+import React from 'react';
 
-import { CusButton, Item } from '../StyledComponents'
+import Box from '@mui/material/Box';
+import { Grid } from "@mui/material";
+import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles';
+
+
+
 
 const IdBox = styled(Box)({
-
     borderRadius: '20px',
     display: 'flex',
     justifyContent: 'center',
@@ -59,7 +34,6 @@ export default function TestIdComponent({ testid }) {
                         marginLeft: '0px'
                     }}>
                     <Typography sx={{
-                        // fontSize: '18px',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -94,5 +68,4 @@ export default function TestIdComponent({ testid }) {
         </IdBox>
 
     )
-    // <CusButton />
 };

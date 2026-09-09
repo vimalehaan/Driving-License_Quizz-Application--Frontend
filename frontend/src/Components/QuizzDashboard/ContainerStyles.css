@@ -1,0 +1,15 @@
+/* App.css */
+.container {
+    display: flex;
+     justify-content: space-around; 
+     margin-left: 25px;
+     margin-right: 25px;
+  }
+  
+  .difficulty-container {
+    width: 45%; /* Adjust the width as needed */
+    
+    padding: 10px;
+    margin: 10px;
+  }
+  

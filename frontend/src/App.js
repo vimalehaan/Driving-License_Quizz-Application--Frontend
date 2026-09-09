@@ -1,18 +1,16 @@
 import './App.css';
-import Login from './Login';
-import AddTest from './AddTest';
-import Payment from './Payment';
-import QuestionTextField from './Components/Admin/QuestionTextField';
-import TestIdComponent from './Components/Admin/TestIDContainer';
+import RouteMain from './Routes';
+
+import { GoogleLogin, GoogleOAuthProvider, useGoogleLogin } from '@react-oauth/google';
 
 function App() {
   return (
     <div className="App">
-      
-      {/* <Login /> */}
-      <AddTest />
-      {/* <QuestionTextField /> */}
-      {/* <Payment /> */}
+
+    <GoogleOAuthProvider clientId="345006772496-uvo2kh85h9sn1g4pef686hgv180re52c">
+       <RouteMain />
+    </GoogleOAuthProvider>
+
     </div>
   );
 }
